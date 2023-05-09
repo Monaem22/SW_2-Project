@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "7ffcb48e-aa5d-4812-a5c2-801df067a99c",
+		"name": "patients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26812826"
+	},
+	"item": [
+		{
+			"name": "registerAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{my access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\"  :  \"a5\",\r\n    \"password\" : \"uy\",\r\n    \"email\" : \"monaem_Osama🎃@gmail.com\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/Admin/registerAdmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"Admin",
+						"registerAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminLogin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/Admin/adminLogin?name=a5&password=uy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"Admin",
+						"adminLogin"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "a5"
+						},
+						{
+							"key": "password",
+							"value": "uy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/ManageMedicine/deleteById?id=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"ManageMedicine",
+						"deleteById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAllMedicine",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/ManageMedicine/deleteAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"ManageMedicine",
+						"deleteAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateMedicineData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{my access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\" : \"kgkr\",\r\n    \"price\" : \"196215\" ,\r\n    \"description\" : \"hrtgwefgvtyuj\"\r\n\r\n    \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/Admin/modifyMedicine/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"Admin",
+						"modifyMedicine",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add medicine",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{my access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"price\" : \"20\",\r\n        \"name\" : \"ach\",\r\n        \"description\" : \"vcwecfwe ec\"\r\n        // \" AdminId \"   :   \r\n        //     {\r\n        //          \"id\": 2\r\n        //     }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/ManageMedicine/AddNewMedicine/uy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"ManageMedicine",
+						"AddNewMedicine",
+						"uy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerPatient",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{my access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\"  :  \"monaem😜\",\r\n    \"password\" : \"222\",\r\n    \"email\" : \"monaem_Osama🎃@gmail.com\",\r\n    \" medicineModelId \"   :   \r\n            {\r\n                 \"id\": 1\r\n\r\n            }\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/patient/registerPatient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"patient",
+						"registerPatient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatientLogin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/patient/PatientLogin?name=monaem😜&password=222",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"patient",
+						"PatientLogin"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "monaem😜"
+						},
+						{
+							"key": "password",
+							"value": "222"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePatientData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{my access token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\" : \"ffffff\",\r\n    \"email\" : \"monaem_Osama🎃@gmail.com\" ,\r\n    \"password\" : \"123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/patient/modifyPatient/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"patient",
+						"modifyPatient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchMedicineById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/ManageMedicine/SearchMedicineById?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"ManageMedicine",
+						"SearchMedicineById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllMedicine",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/ManageMedicine/viewAllMedicine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"ManageMedicine",
+						"viewAllMedicine"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
